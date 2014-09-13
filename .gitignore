@@ -1,3 +1,5 @@
 *.vo
 *.glob
 *.v.d
+*.~undo-tree~
+.DS_Store
