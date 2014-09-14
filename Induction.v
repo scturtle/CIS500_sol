@@ -661,12 +661,12 @@ Inductive bin : Type :=
   | Odd : bin -> bin
   | Even : bin -> bin.
 
-Fixpoint pred (n : bin) : bin :=
+(*Fixpoint pred (n : bin) : bin :=
   match n with
     | Zero => Zero
     | Odd n => Even n
     | Even n => Odd (pred n)
-  end.
+  end.*)
 
 Fixpoint succ (n : bin) : bin :=
   match n with
