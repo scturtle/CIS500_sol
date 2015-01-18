@@ -9,7 +9,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] Induction:     Proof by Induction
 - [X] Lists:         Working with Structured Data
 - [X] Poly:          Polymorphism and Higher-Order Functions
-- [ ] MoreCoq:       More About Coq
+- [X] MoreCoq:       More About Coq
 - [ ] Logic:         Logic in Coq
 - [ ] Prop:          Propositions and Evidence
 - [ ] MoreLogic

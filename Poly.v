@@ -376,7 +376,7 @@ Definition list123''' := [1; 2; 3].
 Fixpoint repeat {X : Type} (n : X) (count : nat) : list X :=
   match count with
   | O => nil
-  | S count' => n :: (repeat n count')
+  | S count' => n :: repeat n count'
   end.
 
 Example test_repeat1:
@@ -493,6 +493,11 @@ Fixpoint combine {X Y : Type} (lx : list X) (ly : list Y)
         Eval compute in (combine [1;2] [false;false;true;true]).
       print?   []
 *)
+
+Check @combine.
+(* combine : forall X Y : Type, list X -> list Y -> list (X * Y) *)
+Eval compute in (combine [1;2] [false;false;true;true]).
+(* = [(1, false); (2, false)] : list (nat * bool) *)
 
 (** **** Exercise: 2 stars (split)  *)
 (** The function [split] is the right inverse of combine: it takes a
@@ -1159,10 +1164,7 @@ Proof.
   induction l as [| n l'].
   reflexivity.
   simpl.
-  unfold fold_map.
-  simpl.
   rewrite <- IHl'.
-  unfold fold_map.
   reflexivity.
 Qed.
 (** [] *)

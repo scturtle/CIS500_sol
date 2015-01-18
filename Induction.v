@@ -256,19 +256,13 @@ Theorem plus_comm : forall n m : nat,
   n + m = m + n.
 Proof.
   intros n. induction n as [| n'].
+  intro m. 
   Case "n = 0".
-    induction m as [| m'].
-    SCase "m = 0".
-    reflexivity.
-    SCase "m = S m'".
-    rewrite plus_O_n.
     rewrite plus_0_r.
     reflexivity.
   Case "n = S n'".
-    intros m.
     induction m as [| m'].
     SCase "m = 0".
-    rewrite plus_O_n.
     rewrite plus_0_r.
     reflexivity.
     SCase "m = S m'".
@@ -291,7 +285,6 @@ Proof.
     rewrite <- plus_n_Sm.
     rewrite plus_comm.
     rewrite IHn'.
-    simpl. (* magical? *)
     reflexivity.
 Qed.
 (** [] *)
@@ -431,20 +424,19 @@ Proof.
     in the proof of this one.)  You may find that [plus_swap] comes in
     handy. *)
 
-(* TODO: not original *)
 Theorem mult_n_Sm : forall n m : nat,
  n * S m = n * m + n.
 Proof.
-  intros n m.
+  intro n.
   induction n as [| n'].
-  Case "n = 0". reflexivity.
-  Case "n = S n'".
-    simpl.
-    rewrite IHn'.
-    rewrite plus_assoc.
-    rewrite plus_n_Sm.
-    reflexivity.
-Qed.
+  reflexivity.
+  intro m.
+  simpl.
+  rewrite IHn'.
+  rewrite <- plus_n_Sm.
+  rewrite plus_assoc.
+  reflexivity.
+  Qed.
 
 Theorem mult_comm : forall m n : nat,
  m * n = n * m.

@@ -717,11 +717,9 @@ Proof.
 Theorem plus_id_exercise : forall n m o : nat,
   n = m -> m = o -> n + m = m + o.
 Proof.
-  intros n m o.
-  intros H1.
+  intros n m o H1 H2.
   rewrite -> H1.
-  intros H2.
-  rewrite -> H2.
+  rewrite <- H2.
   reflexivity.  Qed.
 (** [] *)
 
@@ -752,10 +750,8 @@ Theorem mult_S_1 : forall n m : nat,
   m = S n -> 
   m * (1 + n) = m * m.
 Proof.
-  intros n m.
-  intros H.
+  intros n m H.
   rewrite -> H.
-  rewrite <- plus_O_n.
   reflexivity.  Qed.
 (** [] *)
 
@@ -901,15 +897,10 @@ Theorem andb_eq_orb :
   b = c.
 Proof.
   intros b c.
-  destruct c.
-  intros H.
-  rewrite <- andb_rewrite in H. rewrite H.
-  destruct b. reflexivity. reflexivity.
-  intros H.
-  rewrite <- orb_rewrite in H. rewrite <- H.
-  destruct b. reflexivity. reflexivity.
+  destruct b.
+  simpl. intros H. rewrite H. reflexivity.
+  simpl. intros H. rewrite H. reflexivity.
   Qed.
-(* TODO: Can be simplified. *)
 
 (** **** Exercise: 3 stars (binary) *)
 (** Consider a different, more efficient representation of natural
