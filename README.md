@@ -13,7 +13,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] Logic:         Logic in Coq
 - [X] Prop:          Propositions and Evidence
 - [X] MoreLogic
-- [ ] ProofObjects:  Working with Explicit Evidence in Coq
+- [X] ProofObjects:  Working with Explicit Evidence in Coq
 - [ ] MoreInd:       More on Induction
 - [ ] SfLib:         Software Foundations Library
 - [ ] Imp:           Simple Imperative Programs
