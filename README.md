@@ -17,9 +17,9 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] MoreInd:       More on Induction
 - [X] SfLib:         Software Foundations Library
 - [X] Imp:           Simple Imperative Programs
-- [ ] ImpParser:     Lexing and Parsing in Coq
-- [ ] ImpCEvalFun:   Evaluation Function for Imp
-- [ ] Extraction:    Extracting ML from Coq
+- [X] ImpParser:     Lexing and Parsing in Coq
+- [X] ImpCEvalFun:   Evaluation Function for Imp
+- [X] Extraction:    Extracting ML from Coq
 - [ ] Equiv:         Program Equivalence
 - [ ] Hoare:         Hoare Logic, Part I
 - [ ] Hoare2:        Hoare Logic, Part II
