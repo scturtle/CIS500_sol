@@ -15,8 +15,8 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] MoreLogic
 - [X] ProofObjects:  Working with Explicit Evidence in Coq
 - [X] MoreInd:       More on Induction
-- [ ] SfLib:         Software Foundations Library
-- [ ] Imp:           Simple Imperative Programs
+- [X] SfLib:         Software Foundations Library
+- [X] Imp:           Simple Imperative Programs
 - [ ] ImpParser:     Lexing and Parsing in Coq
 - [ ] ImpCEvalFun:   Evaluation Function for Imp
 - [ ] Extraction:    Extracting ML from Coq
