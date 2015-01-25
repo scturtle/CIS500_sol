@@ -171,7 +171,16 @@ Theorem multi_trans :
       multi R y z ->
       multi R x z.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X R x y z H.
+  generalize dependent z.
+  induction H.
+  intros.
+  assumption. 
+  intros.
+  apply IHmulti in H1.
+  apply multi_step with (y:=y).
+  assumption. assumption.
+Qed.
 
 (**  Identifiers and polymorphic partial maps. *)
 
