@@ -20,7 +20,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] ImpParser:     Lexing and Parsing in Coq
 - [X] ImpCEvalFun:   Evaluation Function for Imp
 - [X] Extraction:    Extracting ML from Coq
-- [ ] Equiv:         Program Equivalence
+- [X] Equiv:         Program Equivalence
 - [ ] Hoare:         Hoare Logic, Part I
 - [ ] Hoare2:        Hoare Logic, Part II
 - [ ] Smallstep:     Small-step Operational Semantics
