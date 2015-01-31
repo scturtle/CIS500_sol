@@ -630,6 +630,7 @@ Proof.
   apply H0 in H2.
   apply H1 in H2.
   apply H2.
+Qed.
 (** [] *)
 
 (** **** Exercise: 1 star (not_both_true_and_false)  *)
