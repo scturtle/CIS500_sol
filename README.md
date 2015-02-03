@@ -23,7 +23,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] Equiv:         Program Equivalence
 - [X] Hoare:         Hoare Logic, Part I
 - [X] Hoare2:        Hoare Logic, Part II
-- [ ] Smallstep:     Small-step Operational Semantics
+- [X] Smallstep:     Small-step Operational Semantics
 - [ ] Auto:          More Automation
 - [ ] Types:         Type Systems
 - [ ] Stlc:          The Simply Typed Lambda-Calculus
