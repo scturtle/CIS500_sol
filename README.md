@@ -26,7 +26,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] Smallstep:     Small-step Operational Semantics
 - [X] Auto:          More Automation
 - [X] Types:         Type Systems
-- [ ] Stlc:          The Simply Typed Lambda-Calculus
+- [X] Stlc:          The Simply Typed Lambda-Calculus
 - [ ] StlcProp:      Properties of STLC
 - [ ] MoreStlc:      More on the Simply Typed Lambda-Calculus
 - [ ] Sub:           Subtyping
