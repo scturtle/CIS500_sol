@@ -28,7 +28,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] Types:         Type Systems
 - [X] Stlc:          The Simply Typed Lambda-Calculus
 - [X] StlcProp:      Properties of STLC
-- [ ] MoreStlc:      More on the Simply Typed Lambda-Calculus
+- [X] MoreStlc:      More on the Simply Typed Lambda-Calculus
 - [ ] Sub:           Subtyping
 
 ## Resources
