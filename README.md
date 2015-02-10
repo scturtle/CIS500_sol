@@ -29,7 +29,7 @@ Solutions for course [Software Foundations](http://www.seas.upenn.edu/~cis500/cu
 - [X] Stlc:          The Simply Typed Lambda-Calculus
 - [X] StlcProp:      Properties of STLC
 - [X] MoreStlc:      More on the Simply Typed Lambda-Calculus
-- [ ] Sub:           Subtyping
+- [X] Sub:           Subtyping
 
 ## Resources
 
