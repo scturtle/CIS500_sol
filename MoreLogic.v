@@ -393,8 +393,41 @@ Qed.
     that [test] evaluates to [true] on all their members, [filter test
     l] is the longest.  Express this claim formally and prove it. *)
 
-(* TODO: Too many stars... *)
-(* FILL IN HERE *)
+(* subseq is defined on `nat` in Prop.v *)
+Inductive Subseq {X : Type}
+          : list X -> list X -> Prop :=
+  | subseq_nil_any: forall l2, Subseq [] l2
+  | subseq_ignore1: forall x l1 l2,
+      Subseq l1 l2 -> Subseq l1 (x :: l2)
+  | subseq_match1: forall x l1 l2,
+      Subseq l1 l2 -> Subseq (x :: l1) (x :: l2).
+
+Theorem filter_challenge_2:
+  forall (X: Type) (test: X -> bool) (l subl: list X),
+   forallb test subl = true ->
+   Subseq subl l ->
+   length subl <= length (filter test l).
+Proof.
+  intros.
+  induction H0.
+  Case "nil".
+  simpl. apply O_le_n.
+  Case "ignore1".
+  simpl.
+  destruct (test x).
+  simpl. apply le_S. apply IHSubseq. apply H.
+  apply IHSubseq. apply H.
+  Case "match1".
+  simpl.
+  destruct (test x) eqn:HE.
+    SCase "test x = true".
+    simpl. apply n_le_m__Sn_le_Sm. apply IHSubseq.
+    simpl in H. apply andb_true_elim2 in H. apply H.
+    SCase "test x = false".
+    simpl in H. apply andb_true_elim1 in H.
+    rewrite H in HE.
+    inversion HE.
+Qed.
 (** [] *)
 
 (** **** Exercise: 4 stars, advanced (no_repeats)  *)
