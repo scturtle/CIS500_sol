@@ -2068,7 +2068,7 @@ Inductive ceval : com -> state -> status -> state -> Prop :=
   | E_Seq_Continue : forall c1 c2 st st' st'' sg'',
       c1 / st  || SContinue / st' ->
       c2 / st' || sg'' / st'' ->
-      (c1 ;; c2) / st || sg'' / st'
+      (c1 ;; c2) / st || sg'' / st''
   | E_WhileEnd : forall b st c,
       beval st b = false ->
       (WHILE b DO c END) / st || SContinue / st
